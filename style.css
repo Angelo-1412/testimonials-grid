@@ -33,17 +33,8 @@
     font-family: "Barlow Semi Condensed";
   }
 
-  img {
-    max-width: 100%;
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-
   h1,
-  h2,
-  h3 {
+  h2 {
     margin: 0;
     line-height: 1.1;
   }
@@ -133,7 +124,7 @@
   overflow: hidden;
 }
 
-.testimonials-container {
+.main__testimonials {
   max-width: calc(1300 / 16 * 1rem);
   display: grid;
   grid-template-columns: 1fr;
@@ -156,225 +147,212 @@
 
 /* COMMON IN CONTAINERS */
 
-.daniel-container,
-.jonathan-container,
-.jeanette-container,
-.patrick-container,
-.kira-container {
+.testimonial {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.241);
   border-radius: 10px;
   padding: 2rem;
 }
 
+.testimonial__img {
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.testimonial__title {
+  font-size: clamp(1.2rem, 1.094rem + 0.451vw, 1.5rem);
+  font-weight: 600;
+  margin-block: 1rem;
+}
+
+.testimonial__description {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
 /*INDIVIDUAL CONTAINERS*/
 
-.daniel-container {
+/* DANIEL CONTAINER */
+
+.testimonial--daniel {
   grid-area: dan;
   background-color: var(--c-bgcolor-box1);
   position: relative;
-
-  h2 {
-    position: relative;
-    font-size: clamp(1.2rem, 1.094rem + 0.451vw, 1.5rem);
-    font-weight: 600;
-    margin-block: 1rem;
-    color: var(--fc-h2-daniel);
-    z-index: 1;
-  }
-
-  p {
-    color: var(--fc-testimonial-daniel);
-    line-height: 1.5;
-    font-weight: 500;
-  }
 }
 
-.quotation-bg {
+.testimonial__title--daniel {
+  position: relative;
+  color: var(--fc-h2-daniel);
+  z-index: 1;
+}
+
+.testimonial__description--daniel {
+  color: var(--fc-testimonial-daniel);
+}
+
+.testimonial__quotation {
   display: none;
 }
 
 @media (width >= 75rem) {
-  .quotation-bg {
+  .testimonial__quotation {
     display: block;
     position: absolute;
     top: 0;
     right: 80px;
     width: 128px;
     height: 128px;
-    transform: rotate(-5deg);
   }
 }
 
-.jonathan-container {
+/* JONATHAN CONTAINER */
+
+.testimonial--jonathan {
   grid-area: jon;
   background-color: var(--c-bgcolor-box2);
-
-  h2 {
-    font-size: clamp(1.2rem, 1.094rem + 0.451vw, 1.5rem);
-    font-weight: 600;
-    margin-block: 1rem;
-    color: var(--fc-h2-jonathan);
-  }
-
-  p {
-    color: var(--fc-testimonial-jonathan);
-    line-height: 1.5;
-    font-weight: 500;
-  }
 }
 
-.jeanette-container {
+.testimonial__title--jonathan {
+  color: var(--fc-h2-jonathan);
+}
+
+.testimonial__description--jonathan {
+  color: var(--fc-testimonial-jonathan);
+}
+
+/* JEANETTE CONTAINER */
+
+.testimonial--jeanette {
   grid-area: jean;
   background-color: var(--c-bgcolor-box3);
-
-  h2 {
-    font-size: clamp(1.2rem, 1.094rem + 0.451vw, 1.5rem);
-    font-weight: 600;
-    margin-block: 1rem;
-    color: var(--fc-h2-jeanette);
-  }
-
-  p {
-    color: var(--fc-testimonial-jeanette);
-    line-height: 1.5;
-    font-weight: 500;
-  }
 }
 
-.patrick-container {
+.testimonial__title--jeanette {
+  color: var(--fc-h2-jeanette);
+}
+
+.testimonial__description--jeanette {
+  color: var(--fc-testimonial-jeanette);
+}
+
+/* PATRICK CONTAINER */
+
+.testimonial--patrick {
   grid-area: pat;
   background-color: var(--c-bgcolor-box4);
-
-  h2 {
-    font-size: clamp(1.2rem, 1.094rem + 0.451vw, 1.5rem);
-    font-weight: 600;
-    margin-block: 1rem;
-    color: var(--fc-h2-patrick);
-  }
-
-  p {
-    color: var(--fc-testimonial-patrick);
-    line-height: 1.5;
-    font-weight: 500;
-  }
 }
 
-.kira-container {
+.testimonial__title--patrick {
+  color: var(--fc-h2-patrick);
+}
+
+.testimonial__description--patrick {
+  color: var(--fc-testimonial-patrick);
+}
+
+/* KIRA CONTAINER */
+
+.testimonial--kira {
   grid-area: kira;
   background-color: var(--c-bgcolor-box5);
-
-  h2 {
-    font-size: clamp(1.2rem, 1.094rem + 0.451vw, 1.5rem);
-    font-weight: 600;
-    margin-block: 1rem;
-    color: var(--fc-h2-kira);
-  }
-
-  p {
-    color: var(--fc-testimonial-kira);
-    line-height: 1.5;
-    font-weight: 500;
-  }
 }
 
-/* PROFILE PIC*/
+.testimonial__title--kira {
+  color: var(--fc-h2-kira);
+}
 
-.daniel-pic {
+.testimonial__description--kira {
+  color: var(--fc-testimonial-kira);
+}
+
+/*TESTIMONIAL IMG*/
+
+.testimonial__img--daniel {
   border: 2px solid var(--c-border-daniel);
 }
 
-.jonathan-pic {
+.testimonial__img--jonathan {
   border: 2px solid var(--c-border-jonathan);
 }
 
-.jeanette-pic {
+.testimonial__img--jeanette {
   border: 2px solid var(--c-border-jeanette);
 }
 
-.patrick-pic {
+.testimonial__img--patrick {
   border: 2px solid var(--c-border-patrick);
 }
 
-.kira-pic {
+.testimonial__img--kira {
   border: 2px solid var(--c-border-kira);
 }
 
-/*AUTHOR AND DESCRIPTION - COMMON*/
+/*AUTHOR AND STATUS - COMMON*/
 
-.profile {
+.testimonial__profile {
   display: flex;
   align-items: center;
 }
 
-.author {
+.testimonial__author {
   padding-left: 1.2rem;
-
-  p {
-    line-height: 1.3;
-  }
 }
 
-.dan-description p:nth-child(1),
-.jon-description p:nth-child(1),
-.jean-description p:nth-child(1),
-.pat-description p:nth-child(1),
-.kira-description p:nth-child(1) {
+.testimonial__name {
   font-size: clamp(0.938rem, 0.845rem + 0.394vw, 1.2rem);
   font-weight: 500;
 }
 
-.dan-description p:nth-child(2),
-.jon-description p:nth-child(2),
-.jean-description p:nth-child(2),
-.pat-description p:nth-child(2),
-.kira-description p:nth-child(2) {
+.testimonial__status {
   font-size: clamp(0.813rem, 0.746rem + 0.282vw, 1rem);
   font-weight: 500;
 }
 
-/*AUTHOR AND DESCRIPTION - INDIVIDUAL*/
+/*AUTHOR AND STATUS - INDIVIDUAL*/
 
-.dan-description p:nth-child(1) {
+.testimonial__name--daniel {
   color: var(--fc-name-daniel);
 }
 
-.dan-description p:nth-child(2) {
+.testimonial__status--daniel {
   color: var(--fc-ver-daniel);
 }
 
-.jon-description p:nth-child(1) {
+.testimonial__name--jonathan {
   color: var(--fc-name-jonathan);
 }
 
-.jon-description p:nth-child(2) {
+.testimonial__status--jonathan {
   color: var(--fc-ver-jonathan);
 }
 
-.jean-description p:nth-child(1) {
+.testimonial__name--jeanette {
   color: var(--fc-name-jeanette);
 }
 
-.jean-description p:nth-child(2) {
+.testimonial__status--jeanette {
   color: var(--fc-ver-jeanette);
 }
 
-.pat-description p:nth-child(1) {
+.testimonial__name--patrick {
   color: var(--fc-name-patrick);
 }
 
-.pat-description p:nth-child(2) {
+.testimonial__status--jeanette {
   color: var(--fc-ver-patrick);
 }
 
-.kira-description p:nth-child(1) {
+.testimonial__name--kira {
   color: var(--fc-name-kira);
 }
 
-.kira-description p:nth-child(2) {
+.testimonial__status--kira {
   color: var(--fc-ver-kira);
 }
 
-.attribution {
+.footer__attribution {
   font-size: 11px;
   text-align: center;
   position: absolute;
